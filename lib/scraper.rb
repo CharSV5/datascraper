@@ -14,8 +14,11 @@ class Scraper
     concert.css('.venue-details').text.split(':')[0]
   end
 
-  def get_venue(get_location)
+  def get_location(concert)
     location = concert.css('.venue-details').text.split(':')[1]
-    location.split("\n")[0] unless location.nil?
+  end
+
+  def get_venue(get_location)
+    get_location.split("\n")[0] unless get_location.nil?
   end
 end
