@@ -10,5 +10,7 @@ class Scraper
     concert.css('.searchResultsPrice').text
   end
 
-  
+  def get_city(concert)
+    concert.css('.venue-details').text.split(':')[0]
+  end
 end
