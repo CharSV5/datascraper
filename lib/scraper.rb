@@ -1,7 +1,14 @@
 require 'nokogiri'
 require 'open-uri'
+require 'csv'
 
 class Scraper
+  attr_reader :concerts
+
+  def initialize(concerts)
+    @concerts = concerts
+  end
+
   def get_name(concert)
     concert.css('.event_link').text
   end

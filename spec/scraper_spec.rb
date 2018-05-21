@@ -3,7 +3,7 @@ require 'scraper'
 describe Scraper do
   page = Nokogiri::HTML(open('http://localhost:9292'))
   @concerts = page.css('.content')
-  subject = Scraper.new
+  subject = Scraper.new(@concerts)
   describe '#get_name' do
     @concerts = page.css('.content')
     it 'returns the name of an act' do
@@ -42,13 +42,13 @@ describe Scraper do
       expect(subject.get_date(subject.get_location(@concerts))).to include 'Fri June 18th, 2018'
     end
   end
-  describe '#write_data_to_file' do
-    it 'writes all data to a csv file' do
-      @concerts = page.css('.content')
-      subject.write_data_to_file(9)
-      file = CSV.read('./results9.csv')
-      puts file.inspect
-      expect(file).to include("Foo Fighters")
-    end
-  end
+  # describe '#write_data_to_file' do
+  #   it 'writes all data to a csv file' do
+  #     @concerts = page.css('.content')
+  #     subject.write_data_to_file(9)
+  #     file = CSV.read('./results9.csv')
+  #     puts file.inspect
+  #     expect(file).to include("Foo Fighters")
+  #   end
+  # end
 end
