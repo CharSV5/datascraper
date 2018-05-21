@@ -21,4 +21,8 @@ class Scraper
   def get_venue(get_location)
     get_location.split("\n")[0] unless get_location.nil?
   end
+
+  def get_date(get_location)
+    get_location.split("\n")[1] unless get_location.nil?
+  end
 end
