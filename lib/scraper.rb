@@ -32,6 +32,7 @@ class Scraper
   def get_date(get_location)
     get_location.split("\n")[1] unless get_location.nil?
   end
+
   def write_data_to_file(num)
     CSV.open("results#{num}.csv", 'a') do |row|
       @concerts.each do |concert|
