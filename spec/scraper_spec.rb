@@ -11,4 +11,10 @@ describe Scraper do
       expect(subject.get_name(@concerts)).to include 'Foo Fighters'
     end
   end
+  describe '#get_price' do
+    it 'returns the price of a show' do
+      @concerts = page.css('.content')
+      expect(subject.get_price(@concerts)).to include '£50'
+    end
+  end
 end
