@@ -24,10 +24,15 @@ describe Scraper do
     end
   end
   describe '#get_venue' do
-  it 'returns the venue of a show' do
-    @concerts = page.css('.content')
-    expect(subject.get_venue(subject.get_location(@concerts))).to include 'Wembley Arena'
+    it 'returns the venue of a show' do
+      @concerts = page.css('.content')
+      expect(subject.get_venue(subject.get_location(@concerts))).to include 'Wembley Arena'
+    end
   end
-end
-
+  describe '#get_date' do
+    it 'returns the date of a show' do
+      @concerts = page.css('.content')
+      expect(subject.get_date(subject.get_location(@concerts))).to include 'Fri June 18th, 2018'
+    end
+  end
 end
