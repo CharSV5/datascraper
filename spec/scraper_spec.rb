@@ -17,4 +17,11 @@ describe Scraper do
       expect(subject.get_price(@concerts)).to include '£50'
     end
   end
+  describe '#get_city' do
+    it 'returns the city of a show' do
+      @concerts = page.css('.content')
+      expect(subject.get_city(@concerts)).to include 'London'
+    end
+  end
+
 end

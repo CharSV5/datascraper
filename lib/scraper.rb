@@ -10,4 +10,5 @@ class Scraper
     concert.css('.searchResultsPrice').text
   end
 
+  
 end
