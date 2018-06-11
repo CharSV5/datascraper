@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-21T12:52:47+01:00">2018-05-21T12:52:47+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-25T19:46:38+01:00">2018-05-25T19:46:38+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.18
+         6.15
        </span>
     </span> hits/line)
   </h2>
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#836bc3e194745c9c99b59f4f4bdeeaea6b3866fc" class="src_link" title="lib/scraper.rb">lib/scraper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>45</td>
+        <td>46</td>
         <td>24</td>
         <td>24</td>
         <td>0</td>
-        <td>17.8</td>
+        <td>17.7</td>
       </tr>
       
       <tr>
@@ -192,8 +192,8 @@
           <code class="ruby">  def get_name(concert)</code>
         </li>
       
-        <li class="covered" data-hits="100" data-linenumber="13">
-          <span class="hits">100</span>
+        <li class="covered" data-hits="98" data-linenumber="13">
+          <span class="hits">98</span>
           
           <code class="ruby">    concert.css(&#39;.event_link&#39;).text</code>
         </li>
@@ -324,67 +324,73 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">  def write_data_to_file(num)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="36">
+        <li class="covered" data-hits="3" data-linenumber="37">
           <span class="hits">3</span>
           
           <code class="ruby">    CSV.open(&quot;results#{num}.csv&quot;, &#39;a&#39;) do |row|</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="37">
+        <li class="covered" data-hits="3" data-linenumber="38">
           <span class="hits">3</span>
           
           <code class="ruby">      @concerts.each do |concert|</code>
         </li>
       
-        <li class="covered" data-hits="66" data-linenumber="38">
-          <span class="hits">66</span>
+        <li class="covered" data-hits="64" data-linenumber="39">
+          <span class="hits">64</span>
           
           <code class="ruby">        next unless get_name(concert) != &#39;&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">        row &lt;&lt; [{ NAME: get_name(concert), PRICE: get_price(concert),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
+          <code class="ruby">        row &lt;&lt; [{ NAME: get_name(concert), PRICE: get_price(concert),</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
           <code class="ruby">                  CITY: get_city(concert), VENUE: get_venue(get_location(concert)),</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="41">
+        <li class="covered" data-hits="33" data-linenumber="42">
           <span class="hits">33</span>
           
           <code class="ruby">                  DATE: get_date(get_location(concert)) }]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
